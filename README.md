@@ -3,7 +3,7 @@ Bot created by jcavejr in python3.5 utilizing the discord.py library and the cas
 
 
 
-Current functionality:
+<strong>Current functionality:</strong>
 
   Command '!member' promotes user to a member.
   
@@ -13,7 +13,7 @@ Current functionality:
   
   
   
-Instructions:
+<strong>Instructions:</strong>
 
   First you have to make a discord bot account. Google it if you don't know how.
   
@@ -51,6 +51,6 @@ Instructions:
     
     
     
-Upcoming features:
+<strong>Upcoming features:</strong>
 
   Command '!member (summoner name) (region)' will promote the user to member if the summoner is a support main. Further edits    will require the user to renamee a rune page to a random key provided by the bot to verify that the user is indeed the      entered summoner.
