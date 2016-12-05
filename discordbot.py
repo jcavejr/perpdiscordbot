@@ -3,6 +3,7 @@ client = discord.Client()
 
 TOKEN = os.environ['DISCORD_BOT_KEY']
 MY_USERID = os.environ['MY_DISCORD_ID']
+RIOT_DEV_KEY = os.environ['RIOT_DEV_KEY']
 
 @client.event
 async def on_ready():
