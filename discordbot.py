@@ -4,8 +4,7 @@ from cassiopeia import riotapi
 client = discord.Client()
 
 #Fetch env variables
-#TOKEN = os.environ['DISCORD_BOT_KEY']
-TOKEN = 'Mjk3ODA5MTcwNzY0MjY3NTQw.C8lksw.oDmFytDr1tqcJW4V3CvddnezpOs'
+TOKEN = os.environ['DISCORD_BOT_KEY']
 MY_USERID = os.environ['MY_DISCORD_ID']
 DEV_KEY = os.environ['DEV_KEY']
 
