@@ -35,6 +35,7 @@ def checkSupportList(userid):
         for line in f:
             if line[:-1] == userid:
                 return True
+    return False
 
 
 
@@ -56,10 +57,12 @@ async def on_message(message):
             await client.add_roles(author, role_member)
             await client.send_message(message.channel, "You've been granted the role `member`.")
         else:
-            await client.send_message(message.channel, 'You are not on the list of support mains. Try the command `!checksupport <summoner name> <region>`')
+            await client.send_message(message.channel, "You're not on the list of support mains. Try the command `!checksupport <summoner name> <region>`")
     if content.lower().startswith('!checksupport'):
         summonerName = ' '.join(content.split()[1:-1])
         summonerRegion = content.split()[-1]
+        if checkSupportList(authorid):
+            await client.send_message(message.channel, "You're already on the list of support mains.")
         if isSupport(summonerName, summonerRegion):
             with open('supportmains.txt', 'a') as f:
                 f.write(authorid + '\n')
@@ -67,7 +70,7 @@ async def on_message(message):
         else:
             await client.send_message(message.channel, summonerName + ' does not meet our criteria of beibg a support main.')
     if content.lower() == '!help':
-        helpmessage = "`Here is your help`"
+        helpmessage = "`Sorry, this command is currently in development. Check back another time!`"
         await client.send_message(author, helpmessage)
     #kill bot if i say so
     if (content.lower() == '!kill') & (authorid == MY_USERID):
