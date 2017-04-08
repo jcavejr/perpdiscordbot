@@ -5,7 +5,9 @@ Bot created by jcavejr in python3.5 utilizing the discord.py library and the cas
 
 <strong>Current functionality:</strong>
 
-  Command '!member' promotes user to a member.
+  Command '!checksupport \<Summoner Name\> \<Summoner Region\>' adds a summoner to a list of support mains.
+
+  Command '!member \<Summoner Name\> \<Summoner Region\>' promotes user to a member if the user is on the list of support mains.
   
   Command '!kill' kills the bot, is only usable by the owner of the bot.
   
@@ -45,12 +47,10 @@ Bot created by jcavejr in python3.5 utilizing the discord.py library and the cas
       
     Open terminal and type 'python3 -m pip install -U discord.py'. (Refer to https://github.com/Rapptz/discord.py).
     
+    Open terminal again and type 'pip3 install cassiopeia'. (Refer to https://github.com/meraki-analytics/cassiopeia).
+    
     Open terminal again and type 'idle-python3.5'. Press file -> open file (find the file and open it). Press f5 and watch your bot run.
     
     Keep in mind your bot has to have ADMIN PERMISSIONS. Without admin permissions, your bot won't work. You'll just get errors.
     
     
-    
-<strong>Upcoming features:</strong>
-
-  Command '!member (summoner name) (region)' will promote the user to member if the summoner is a support main. Further edits    will require the user to renamee a rune page to a random key provided by the bot to verify that the user is indeed the      entered summoner.
