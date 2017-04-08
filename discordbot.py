@@ -25,8 +25,6 @@ def isSupport(summname, region):
         if str(match.role) == 'Role.support':
             counter += 1
         if counter == 3:
-            with open('supportmains.txt', 'a') as f:
-                f.write(str(summoner.id) + '\n')
             return True
     return False
 
@@ -63,7 +61,7 @@ async def on_message(message):
         summonerRegion = content.split()[-1]
         if checkSupportList(authorid):
             await client.send_message(message.channel, "You're already on the list of support mains.")
-        if isSupport(summonerName, summonerRegion):
+        elif isSupport(summonerName, summonerRegion):
             with open('supportmains.txt', 'a') as f:
                 f.write(authorid + '\n')
             await client.send_message(message.channel, "You've been added to the list of support mains.")
