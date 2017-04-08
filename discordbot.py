@@ -1,3 +1,4 @@
+#!/usr/bin/env python3.5
 import discord, os
 from cassiopeia import riotapi
 #Start discord client
