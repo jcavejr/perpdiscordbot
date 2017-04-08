@@ -29,10 +29,14 @@ def isSupport(summname, region):
     return False
 
 def checkSupportList(userid):
-    with open('supportmains.txt', 'r') as f:
-        for line in f:
-            if line[:-1] == userid:
-                return True
+    try:
+        with open('supportmains.txt', 'r') as f:
+            for line in f:
+                if line[:-1] == userid:
+                    return True
+    except FileNotFoundError:
+        ofile = open('supportmains.txt', 'w')
+        ofile.close()
     return False
 
 
